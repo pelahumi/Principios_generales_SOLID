@@ -1,0 +1,9 @@
+@startuml ejercicio1
+
+class Matriz {
+  +__init__(elementos: List[List[int]]) : void
+  +imprimir() : void
+  +transpuesta() : Matriz
+}
+
+@enduml
