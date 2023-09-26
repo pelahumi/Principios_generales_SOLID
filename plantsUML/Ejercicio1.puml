@@ -1,9 +1,38 @@
-@startuml 
+@startuml ejercicio1
 
 class Matriz {
   +__init__(elementos: List[List[int]]) : void
   +imprimir() : void
-  +transpuesta() : Matriz
 }
+
+class Transpuesta {
+  +__init__(elementos: List[List[int]]) : void
+  +transponer() : Matriz
+}
+
+class Imprimir {
+  +__init__(elementos: List[List[int]]) : void
+  +imprimir() : void
+}
+
+class Lanzador {
+  -elementos: List[List[int]]
+  -cantidad_filas: int
+  -cantidad_columnas: int
+  +crear_matriz() : void
+  +lanzar() : void
+}
+
+class Main {
+  -lanzador: Lanzador
+  +__init__() : void
+}
+
+Matriz <-- Transpuesta
+Matriz <-- Imprimir
+Lanzador --> Matriz
+Lanzador --> Transpuesta
+Lanzador --> Imprimir
+Main --> Lanzador
 
 @enduml
