@@ -1,4 +1,4 @@
-@startuml ejercicio1
+@startuml 
 
 class Matriz {
   +__init__(elementos: List[List[int]]) : void
